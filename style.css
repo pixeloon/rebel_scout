@@ -1,0 +1,56 @@
+
+.header {
+  height: 100px;
+  width:100%;
+  border:1px dashed red;
+}
+
+.wrapper {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  left:50%;
+  margin-left: -400px;
+  top: 120px
+}
+.game {
+  height: 510px;
+  width: 510px;
+  display: inline-block;
+  
+  /*border: 1px solid green;*/
+}
+
+#gameCanvas {
+  border:1px solid black;
+}
+
+.info {
+  width: 250px;
+  height: 510px;
+  min-height: 510px;
+  display: inline-block;
+  border:1px solid blue;
+}
+
+/*.row {
+  height: 50px;
+}
+
+.sector, .covered, .uncovered {
+  height: 48px;
+  width: 48px;
+  border:1px dashed black;
+  display: inline-block;
+
+}
+
+.covered {
+  background-color: #A191A1;
+}
+
+.uncovered {
+  background-color: #F0D8F0;
+  display: none;
+}*/
+
