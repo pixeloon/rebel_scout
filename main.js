@@ -62,26 +62,6 @@ function main() {
     }
 
 
-    // adjacent sector numbering
-    // |0|1|2|
-    // |3|X|4|
-    // |5|6|7|
-
-    // TODO: EDGE CASES
-    function adjSectors(sectorClicked) {
-        var adj0 = sectorClicked - (mapLength + 1);
-        var adj1 = sectorClicked - mapLength;
-        var adj2 = sectorClicked - (mapLength - 1);
-        var adj3 = sectorClicked - 1;
-        var adj4 = sectorClicked + 1;
-        var adj5 = sectorClicked + (mapLength - 1);
-        var adj6 = sectorClicked + (mapLength);
-        var adj7 = sectorClicked + (mapLength + 1);
-
-        // console.log(adj0 + " " + adj1 + " " + adj2 + " " + adj3 + " " + adj4 + " " + adj5 + " " + adj6 + " " + adj7);
-
-    }
-
     // event listener
     $gameCanvas.on("click", getSectorClicked);
 
@@ -96,10 +76,14 @@ function main() {
         var sectorClicked = (sectormapY * mapLength) + sectormapX;
 
         //get position in map array from sector clicked
-        sectormapX = sectorClicked % 16;
-        sectormapY = Math.floor(sectorClicked / 16);
+        // sectormapX = sectorClicked % 16;
+        // sectormapY = Math.floor(sectorClicked / 16);
 
         console.log("X: " + xPosition + " " + sectormapX + ", Y: " + yPosition + " " + sectormapY + ", sector: " + sectorClicked);
+
+
+
+
 
         if (map[sectorClicked] === 1) {
             $('canvas').drawImage({
@@ -140,27 +124,189 @@ function main() {
 
             });
 
-            for (i = 0; i < 8; i++) {
+            checkAdj(sectormapX, sectormapY);
+
+
+        }
+
+    }
+
+    function checkAdj(x, y) {
+
+        var sectorClicked = (y * mapLength) + x;
+        console.log("inside checkAdj, Sector: " + sectorClicked + " x:" + x + " and y:" + y);
+
+
+        // adjacent sector numbering
+        // |0|1|2|
+        // |3|X|4|
+        // |5|6|7|
+
+        // TODO: EDGE CASES
+        var adj0 = sectorClicked - (mapLength + 1);
+        var adj1 = sectorClicked - mapLength;
+        var adj2 = sectorClicked - (mapLength - 1);
+        var adj3 = sectorClicked - 1;
+        var adj4 = sectorClicked + 1;
+        var adj5 = sectorClicked + (mapLength - 1);
+        var adj6 = sectorClicked + (mapLength);
+        var adj7 = sectorClicked + (mapLength + 1);
+        console.log(adj0 + " " + adj1 + " " + adj2 + " " + adj3 + " " + adj4 + " " + adj5 + " " + adj6 + " " + adj7);
+        console.log("ADJ:" + map[adj0]);
+
+        //check if map shows any bogeys in adjacent sectors from adj0
+        if ((map[adj0] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj0] % 16;
+            adjsectorY = Math.floor(sectors[adj0] / 16);
+            console.log("Adj0 - x: " + adjsectorX + " y: " + adjsectorY);
 
             $('canvas').drawImage({
-                source: 'images/1.png',
+                source: 'images/target2.png',
                 layer: true,
                 visible: true,
-                x: sectormapX * 30,
-                y: sectormapY * 30,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
                 width: 30,
                 height: 30,
                 fromCenter: false,
 
             });
-            }
         }
+        //check if map shows any bogeys in adjacent sectors from adj1
+        if ((map[adj1] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj1] % 16;
+            adjsectorY = Math.floor(sectors[adj1] / 16);
 
+            $('canvas').drawImage({
+                source: 'images/target2.png',
+                layer: true,
+                visible: true,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
+                width: 30,
+                height: 30,
+                fromCenter: false,
+
+            });
+        }
+        //check if map shows any bogeys in adjacent sectors from adj2
+        if ((map[adj2] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj2] % 16;
+            adjsectorY = Math.floor(sectors[adj2] / 16);
+            console.log("Adj0 - x: " + adjsectorX + " y: " + adjsectorY);
+
+            $('canvas').drawImage({
+                source: 'images/target2.png',
+                layer: true,
+                visible: true,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
+                width: 30,
+                height: 30,
+                fromCenter: false,
+
+            });
+        }
+        //check if map shows any bogeys in adjacent sectors from adj3
+        if ((map[adj3] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj3] % 16;
+            adjsectorY = Math.floor(sectors[adj3] / 16);
+            console.log("Adj0 - x: " + adjsectorX + " y: " + adjsectorY);
+
+            $('canvas').drawImage({
+                source: 'images/target2.png',
+                layer: true,
+                visible: true,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
+                width: 30,
+                height: 30,
+                fromCenter: false,
+
+            });
+        }
+        //check if map shows any bogeys in adjacent sectors from adj4
+        if ((map[adj4] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj4] % 16;
+            adjsectorY = Math.floor(sectors[adj4] / 16);
+            console.log("Adj0 - x: " + adjsectorX + " y: " + adjsectorY);
+
+            $('canvas').drawImage({
+                source: 'images/target2.png',
+                layer: true,
+                visible: true,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
+                width: 30,
+                height: 30,
+                fromCenter: false,
+
+            });
+        }
+        //check if map shows any bogeys in adjacent sectors from adj5
+        if ((map[adj5] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj5] % 16;
+            adjsectorY = Math.floor(sectors[adj5] / 16);
+            console.log("Adj0 - x: " + adjsectorX + " y: " + adjsectorY);
+
+            $('canvas').drawImage({
+                source: 'images/target2.png',
+                layer: true,
+                visible: true,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
+                width: 30,
+                height: 30,
+                fromCenter: false,
+
+            });
+        }
+        //check if map shows any bogeys in adjacent sectors from adj6
+        if ((map[adj6] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj6] % 16;
+            adjsectorY = Math.floor(sectors[adj6] / 16);
+            console.log("Adj0 - x: " + adjsectorX + " y: " + adjsectorY);
+
+            $('canvas').drawImage({
+                source: 'images/target2.png',
+                layer: true,
+                visible: true,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
+                width: 30,
+                height: 30,
+                fromCenter: false,
+
+            });
+        }
+        //check if map shows any bogeys in adjacent sectors from adj7
+        if ((map[adj7] === 0)) {
+            // use adjacent sector IDs from sectors array to calculate x and y coordinates
+            adjsectorX = sectors[adj7] % 16;
+            adjsectorY = Math.floor(sectors[adj7] / 16);
+            console.log("Adj0 - x: " + adjsectorX + " y: " + adjsectorY);
+
+            $('canvas').drawImage({
+                source: 'images/target2.png',
+                layer: true,
+                visible: true,
+                x: adjsectorX * 30,
+                y: adjsectorY * 30,
+                width: 30,
+                height: 30,
+                fromCenter: false,
+
+            });
+        }
     }
 
-    function sectorClick() {
-
-    }
 
 
 
