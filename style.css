@@ -1,8 +1,20 @@
+body {
+  /*background-image: url(images/space.gif);*/
+  background-color: #C8C3BF;
+
+}
+
+h1 {
+  font-family: verdana, sans-serif;
+  font-size: 25px;
+  color: red;
+}
+
 
 .header {
   height: 100px;
   width:100%;
-  border:1px dashed red;
+  background-color: #59462E;
 }
 
 .wrapper {
@@ -11,26 +23,60 @@
   height: 600px;
   left:50%;
   margin-left: -400px;
-  top: 120px
-}
-.game {
-  height: 510px;
-  width: 510px;
-  display: inline-block;
-  
-  /*border: 1px solid green;*/
+  top: 120px;
+  background-color: #59462E;
+  border:0px solid black;
+  border-radius: 10px;
 }
 
-#gameCanvas {
-  border:1px solid black;
+/*.leatherFrame {
+  top:10px;
+  left:10px;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-color: #D9AE79;
+  border:0px solid black;
+  border-radius: 10px;
+}
+
+.silverFrame {
+  top:10px;
+  left:10px;
+  position: relative;
+  height: 520px;
+  width: 520px;
+  background-color: #66697C;
+  border:0px solid black;
+  border-radius: 10px;
+
+}
+*/
+.game {
+  height: 480px;
+  width: 480px;
+  position: relative;
+  left: 10px;
+  top: 10px;
+  display: inline-block;
+  background-color: #59462E;
+
 }
 
 .info {
   width: 250px;
-  height: 510px;
-  min-height: 510px;
+  /*height: 520px;*/
+  min-height: 480px;
+  position: relative;
+  top: 10px;
+  right: 10px;
   display: inline-block;
-  border:1px solid blue;
+  float: right;
+  border:5px solid #525568;
+  background-color: #D8D2C7;
+  border-radius: 50px;
+  padding-left: 10px;
+  /*background-image: url(images/space.gif)*/
 }
 
 /*.row {
