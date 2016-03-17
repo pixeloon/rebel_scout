@@ -1,80 +1,118 @@
 body {
-  /*background-image: url(images/space.gif);*/
-  background-color: #C8C3BF;
-
+    background-color: #C8C3BF;
 }
 
 h1 {
-  font-family: Courier, Verdana, sans-serif;
-  font-size: 25px;
-  color: red;
-  text-align: center;
+    font-family: Courier, Verdana, sans-serif;
+    font-size: 25px;
+    color: red;
+    text-align: center;
 }
 
+h4 {
+  display: inline-block;
+}
 
 .header {
-  height: 100px;
-  width:100%;
-  background-color: #59462E;
+    height: 100px;
+    width: 100%;
+    background-color: #59462E;
 }
 
-.nav1, .nav2  {
-  height: 80px;
-  width: 80px;
-  background-color: #66697C;
-  display: inline-block;
-  margin-left: 50px;
-  margin-top: 5px;
-  border-radius: 100%;
-  border:1px solid black;
-
+.nav1,
+.nav2,
+.nav0 {
+    height: 80px;
+    width: 80px;
+    background-color: #66697C;
+    display: inline-block;
+    margin-left: 50px;
+    border-radius: 100%;
+    border: 1px solid black;
 }
 
-.nav1-1, .nav2-2  {
-  height: 70px;
-  width: 70px;
-  background-color: #66697C;
-  position: relative;
-  margin-top: 4px;
-  margin-left: 4px;
-  border-radius: 100%;
-  border:2px solid black;
-  font-style: Courier;
-  font-size: 15px;
-  text-align: center;
-  padding-top: 10px;
-  color: #FFFFFF;
+.nav1-1,
+.nav2-2 {
+    height: 70px;
+    width: 70px;
+    background-color: #66697C;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 4px;
+    border-radius: 100%;
+    border: 2px solid black;
+    font-style: Courier;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+    color: silver;
+}
+
+.nav0 {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.nav2 {
+  margin-left: 20px;
+}
+
+.hoverStart {
+    border: 2px solid #FFF;
+    /*background-color: silver;*/
+    color: white;
+}
+
+.hoverReset {
+    border: 2px solid red;
+    color: red;
+}
+
+.mousedown {
+  background-color: red;
 }
 
 .score {
-  height: 50px;
-  min-width: 100px;
-  background-color: #000;
-  float: right;
-  display: inline-block;
-  position: relative;
-  top: 20px;
-  right: 10px;
-  border-radius: 5px;
-  color: red;
-  font-family: Courier,sans-serif;
-  font-size: 30px;
-  text-align: center;
-  padding-left: 5px;
-  [padding-right: 5px;]
+    height: 50px;
+    min-width: 100px;
+    background-color: #000;
+    float: right;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    right: 10px;
+    border-radius: 5px;
+    color: red;
+    font-family: Courier, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding-left: 5px;
+    [padding-right: 5px;
+    ]
 }
 
 .wrapper {
-  position: absolute;
-  width: 800px;
-  min-height: 500px;
-  left:50%;
-  margin-left: -400px;
-  top: 120px;
-  background-color: #59462E;
-  border:0px solid black;
-  border-radius: 10px;
+    position: absolute;
+    width: 800px;
+    min-height: 500px;
+    left: 50%;
+    margin-left: -400px;
+    top: 120px;
+    background-color: #59462E;
+    border: 0px solid black;
+    border-radius: 10px;
 }
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    clear: both;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    text-align: center;
+}
+
 
 /*.leatherFrame {
   top:10px;
@@ -99,36 +137,36 @@ h1 {
 
 }
 */
-.game {
-  height: 480px;
-  width: 480px;
-  position: relative;
-  left: 10px;
-  top: 10px;
-  display: inline-block;
-  background-color: #59462E;
 
+.game {
+    height: 480px;
+    width: 480px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    background-color: #000;
+    border: 1px solid black;
 }
 
 .info {
-  width: 250px;
-  /*height: 520px;*/
-  min-height: 480px;
-  font-family: Courier, Verdana, sans-serif;
-  position: relative;
-  top: 10px;
-  right: 10px;
-  display: inline-block;
-  float: right;
-  border:5px solid #525568;
-  background-color: #000;
-  /*background-color: #D8D2C7;*/
-  border-radius: 50px;
-  padding-left: 10px;
-  color: #51F251;
-  /*background-image: url(images/space.gif)*/
+    width: 250px;
+    /*height: 520px;*/
+    min-height: 480px;
+    font-family: Courier, Verdana, sans-serif;
+    position: relative;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    float: right;
+    border: 5px solid #525568;
+    background-color: #000;
+    /*background-color: #D8D2C7;*/
+    border-radius: 50px;
+    padding-left: 10px;
+    color: #51F251;
+    /*background-image: url(images/space.gif)*/
 }
-
 
 
 /*.row {
@@ -151,4 +189,3 @@ h1 {
   background-color: #F0D8F0;
   display: none;
 }*/
-
