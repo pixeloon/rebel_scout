@@ -59,7 +59,6 @@ h4 {
 
 .hoverStart {
     border: 2px solid #FFF;
-    /*background-color: silver;*/
     color: white;
 }
 
@@ -114,30 +113,6 @@ h4 {
 }
 
 
-/*.leatherFrame {
-  top:10px;
-  left:10px;
-  position: relative;
-  height: 500px;
-  width: 500px;
-  background-color: #D9AE79;
-  border:0px solid black;
-  border-radius: 10px;
-}
-
-.silverFrame {
-  top:10px;
-  left:10px;
-  position: relative;
-  height: 520px;
-  width: 520px;
-  background-color: #66697C;
-  border:0px solid black;
-  border-radius: 10px;
-
-}
-*/
-
 .game {
     height: 480px;
     width: 480px;
@@ -151,9 +126,8 @@ h4 {
 
 .info {
     width: 250px;
-    /*height: 520px;*/
     min-height: 480px;
-    font-family: Courier, Verdana, sans-serif;
+    font-family: Courier, sans-serif;
     position: relative;
     top: 10px;
     right: 10px;
@@ -161,31 +135,9 @@ h4 {
     float: right;
     border: 5px solid #525568;
     background-color: #000;
-    /*background-color: #D8D2C7;*/
     border-radius: 50px;
     padding-left: 10px;
     color: #51F251;
-    /*background-image: url(images/space.gif)*/
 }
 
 
-/*.row {
-  height: 50px;
-}
-
-.sector, .covered, .uncovered {
-  height: 48px;
-  width: 48px;
-  border:1px dashed black;
-  display: inline-block;
-
-}
-
-.covered {
-  background-color: #A191A1;
-}
-
-.uncovered {
-  background-color: #F0D8F0;
-  display: none;
-}*/

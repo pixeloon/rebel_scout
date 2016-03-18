@@ -76,7 +76,7 @@ function main() {
             fromCenter: false,
             fontFamily: 'Courier, sans-serif',
             maxWidth: 450,
-            text: 'Welcome, captain. \n\nYou are a Scout on a mission to discover the locations of any vessels in this sector and collect intelligence. \n\nTry to avoid detection by any of the Empires many Death Stars!'
+            text: 'Welcome, captain. \n\nYou are a Scout on a mission to discover the locations of any vessels in this sector and collect intelligence. \n\nTry to avoid detection by any of the Empire\'s many Death Stars!'
         });
 
         $gameCanvas.drawText({
@@ -155,7 +155,7 @@ function main() {
                 if (map[sectorClicked] === 1) {
 
                     $gameCanvas.drawImage({
-                        source: 'images/death-star-sm.png',
+                        source: 'images/death-star.png',
                         layer: true,
                         visible: true,
                         //get current top left coordinate
