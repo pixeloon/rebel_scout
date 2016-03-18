@@ -23,12 +23,12 @@ function main() {
     var SECTOR_W = 30;
     var SECTOR_H = 30;
 
-    var scanSound = new Audio("R2D2-do.mp3"); // buffers automatically when created
-    var targetSound = new Audio("jetsons-theme.mp3");
-    var dangerSound = new Audio("Game-Show-Buzzer.mp3");
-    var beep = new Audio("beep.mp3");
-    var beep2 = new Audio("beep.mp3");
-    var cantinaSong = new Audio("star-wars-cantina-song.mp3");
+    var scanSound = new Audio("assets/scan.mp3"); // buffers automatically when created
+    var targetSound = new Audio("assets/target.mp3");
+    var dangerSound = new Audio("assets/danger.mp3");
+    var beep = new Audio("assets/beep.mp3");
+    var beep2 = new Audio("assets/beep.mp3");
+    var cantinaSong = new Audio("assets/star-wars-cantina-song.mp3");
 
 
 
